@@ -21,3 +21,6 @@ https://www.acmicpc.net/problem/2503
 
 - 완전탐색
 - 재귀
+
+### 240103
+- 1,2차원 배열 탐색
