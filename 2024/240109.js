@@ -45,35 +45,35 @@
 // 부분집합 구하기(DFS)
 
 function solution(n){
-//   부분집합
-let answer = []
-// 이미 갔던 곳은 가면 안됨, 그러기 위해 체크배열
-const ch = Array.from({length:n+1},()=>0)
+    //   부분집합
+    let answer = []
+    // 이미 갔던 곳은 가면 안됨, 그러기 위해 체크배열
+    const ch = Array.from({length:n+1},()=>0)
 
-    function DFS(L){
-        if(L === n+1){
-            let tmp = ""
-            for(let i = 1; i<=n; i++){
-                console.log('ch',ch)
-                if(ch[i] === 1) tmp += (i+" ")
+        function DFS(L){
+            if(L === n+1){
+                let tmp = ""
+                for(let i = 1; i<=n; i++){
+                    console.log('ch',ch)
+                    if(ch[i] === 1) tmp += (i+" ")
+                }
+                console.log('tmp',tmp)
+                if(tmp.length > 0) answer.push(tmp)
+            }else {
+                // 체크해주고
+                ch[L] = 1
+                // 재귀
+                DFS(L+1)
+                // 백하기전에풀기
+                ch[L]=0
+                DFS(L+1)
+
             }
-            console.log('tmp',tmp)
-            if(tmp.length > 0) answer.push(tmp)
-        }else {
-            // 체크해주고
-            ch[L] = 1
-            // 재귀
-            DFS(L+1)
-            // 백하기전에풀기
-            ch[L]=0
-            DFS(L+1)
-
         }
+
+        DFS(1)
+        return answer
     }
 
-    DFS(1)
-    return answer
-}
 
-
-console.log(solution(3))
+    console.log(solution(3))
