@@ -71,3 +71,10 @@ hint = [list(map(int,input().split())) for _ in range(n)]
 
 answer = 0
 recur(0,100)
+
+
+# for i in range(1,10):
+#     for j in range(1,10):
+#         for k in range(1,10):
+#             if i != j and j != k and i != k:
+#                 print(i,j,k)
