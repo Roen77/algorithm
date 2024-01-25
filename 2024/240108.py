@@ -23,3 +23,6 @@ ingre = [list(map(int,input().split())) for _ in range(N)]
 answer = 99999999999999999
 recur(0,0,1,0)
 print('an',answer)
+
+
+
