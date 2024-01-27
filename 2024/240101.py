@@ -78,3 +78,5 @@ recur(0,100)
 #         for k in range(1,10):
 #             if i != j and j != k and i != k:
 #                 print(i,j,k)
+
+
